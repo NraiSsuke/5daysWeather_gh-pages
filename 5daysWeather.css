@@ -1,0 +1,27 @@
+.japan_area {
+    float: left;
+    width: 324px;
+}
+
+.world_area {
+    float: left;
+}
+
+.day {
+    clear: left
+}
+
+.day_text {
+    margin-left: 0px;
+    width: 600px;
+    font-weight: bold;
+}
+
+.day_select {
+    margin-left: 30px;
+    width: 600px;
+}
+
+.year {
+    font-weight: bold;
+}

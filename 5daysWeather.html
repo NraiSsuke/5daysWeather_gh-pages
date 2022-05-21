@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5日間の週間天気検索</title>
+    <script src="5daysWeather.js"></script>
+    <link rel="stylesheet" href="5daysWeather.css" type="text/css"/>
+  </head>
+
+  <body id="html">
+    <h1 id="h1">５日間天気検索</h1>
+
+    <div class="japan_area">
+      <h3>日本の主な地域</h3>
+      <p>地名を選択肢から選択してください</p>
+      <form id="japan_form">  
+        <select id="japan8">
+          <option value="">選択しない</option>
+          <option value="touhoku">北海道・東北</option>
+          <option value="kantou">関東</option>
+          <option value="tyuubu">中部</option>
+          <option value="kinki">近畿</option>
+          <option value="sikoku">中国・四国</option>
+          <option value="kyuusyuu">九州・沖縄</option>
+        </select>
+        <select id="japan"></select>
+        <input id="japan_submit" type="button" value="検索">
+      </form>
+    </div>
+
+    <div class="world_area">
+      <h3>選択肢にない地域・海外の地域</h3>
+      <p>ローマ字小文字で入力してください</p>
+      <form>
+        <input id="world" type="text" value="">
+        <input id="world_submit" type="button"  value="検索">
+      </form>
+    </div>
+    
+    <div class="day">
+      <span class="day_text">日時の選択も可能です（ 日本の主な地域 が優先されます）</span>
+    </div>
+    <div>
+      <form id="form" class="day_select">
+        <input name="date_select" type="radio" value="now">
+        現在時刻（ 時間は自動で指定 されます）<br>
+        <input name="date_select" type="radio" value="today">今日　
+        <input name="date_select" type="radio" value="1D">明日　
+        <input name="date_select" type="radio" value="2D">明後日　
+        <input name="date_select" type="radio" value="3D">３日後　
+        <input name="date_select" type="radio" value="4D">４日後　
+        <input name="date_select" type="radio" value="5D">５日後<br>
+        
+        <input id="time_select0" name="time_select" type="checkbox" value="0" />
+          <label for="time_select0">
+            ０時　
+          </label>
+        <input id="time_select1" name="time_select" type="checkbox" value="1" />
+          <label for="time_select1">
+            ３時　
+          </label>
+        <input id="time_select2" name="time_select" type="checkbox" value="2" />
+          <label for="time_select2">
+            ６時　
+          </label>
+        <input id="time_select3" name="time_select" type="checkbox" value="3" />
+          <label for="time_select3">
+            ９時　
+          </label>
+        <input id="data_reset" type="button" value="選択解除">
+        <br>
+        <input id="time_select4" name="time_select" type="checkbox" value="4" />
+          <label for="time_select4">
+            １２時　
+          </label>
+        <input id="time_select5" name="time_select" type="checkbox" value="5" />
+          <label for="time_select5">
+            １５時　
+          </label>
+        <input id="time_select6" name="time_select" type="checkbox" value="6" />
+          <label for="time_select6">
+            １８時　
+          </label>
+        <input id="time_select7" name="time_select" type="checkbox" value="7" />
+          <label for="time_select7">
+            ２１時　
+          </label>
+        <input id="date_submit" type="button" value="日時指定">
+      </form>
+    </div>
+
+    <h2 id="cityText"></h2>
+    
+    <table border="1">
+      <tbody id="table">
+        <tr>
+          <th>年(Y)</th>
+        </tr>
+        <tr>
+          <th id="year"></th>
+        </tr>
+        <tr id="standard">
+          <th>月(M)</th>
+          <th>日(D)</th>
+          <th>時間(H)</th>
+          <th>最高気温(℃)</th>
+          <th>最低気温(℃)</th>
+          <th>風速(m)</th>
+          <th>湿度(%)</th>
+          <th>天気</th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
